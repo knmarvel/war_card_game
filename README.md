@@ -1,8 +1,8 @@
-![Kano's logo](https://www.github.com/knmarvel/war-card-game/kanoaslogo.png)
+![Kano's logo](https://knmarvel.github.io/kanoaslogo.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts--FRONT END
 
 In the project directory, you can run:
 

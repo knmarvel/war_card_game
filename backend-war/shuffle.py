@@ -13,5 +13,3 @@ def shuffle():
         if card not in shuffled_cards:
             shuffled_cards.append(carddeck[card])
     return shuffled_cards
-
-
