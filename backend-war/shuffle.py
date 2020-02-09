@@ -11,5 +11,5 @@ def shuffle():
     for x in range(52):
         card = "card" + str(random.randint(0, 51))
         if card not in shuffled_cards:
-            shuffled_cards.append(carddeck[card])
+            shuffled_cards.append([carddeck[card]])
     return shuffled_cards
