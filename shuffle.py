@@ -1,5 +1,4 @@
 import random
-import carddeck
 
 
 def shuffle(cards):
@@ -11,6 +10,3 @@ def shuffle(cards):
             used_ids.append(card_id)
             shuffled_cards.append([cards[card_id]])
     return shuffled_cards
-
-
-# print(shuffle(carddeck.standard_card_deck))

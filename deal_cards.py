@@ -1,5 +1,6 @@
 import shuffle
 
+
 def deal_cards(player_count, cards_in_hand, deck):
     if player_count * cards_in_hand > len(deck):
         return "error--number of cards requested is too high"
@@ -13,4 +14,3 @@ def deal_cards(player_count, cards_in_hand, deck):
                 player_hands[x] = player_hands[x] + deck[0]
                 deck = deck[1:]
         return ((player_hands), (deck))
-
