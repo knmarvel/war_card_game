@@ -13,6 +13,7 @@ def play_war():
     while round_number < 10000 and win_state is False:
         cards_in_play = []
         round_number += 1
+        print("Round " + str(round_number))
         cards_in_play.append(p_deck[0])
         print("You played " + p_deck[0]["name"])
         cards_in_play.append(o_deck[0])
@@ -27,9 +28,9 @@ def play_war():
                     if len(p_deck) < 3 and len(o_deck) < 3:
                         end_message = "Tie game, both players ran out of cards"
                     if len(p_deck) < 3:
-                        end_message = "You lose, you ran out of cards"
+                        end_message = "You lose the game, you ran out of cards"
                     if len(o_deck) < 3:
-                        end_message = "You win, opponent ran out of cards"
+                        end_message = "You win the game, opponent ran out of cards"
                     war_state = False
                     win_state = True
                 else:
@@ -43,22 +44,24 @@ def play_war():
                     o_deck = o_deck[3:]
                     if cards_in_play[-1]["value"] != cards_in_play[-4]["value"]:
                         if cards_in_play[-1]["value"] > cards_in_play[-4]["value"]:
+                            print("Opponent won the war!")
                             o_deck = o_deck + cards_in_play
                         else:
+                            print("You won the war!")
                             p_deck = p_deck + cards_in_play
                         war_state = False
         else:
             if cards_in_play[0]["value"] > cards_in_play[1]["value"]:
                 p_deck = p_deck + cards_in_play
-                print("you won the round! " + str(len(p_deck)))
+                print("you won the round!")
             else:
                 o_deck = o_deck + cards_in_play
-                print("your opponent won the round! " + str(len(p_deck)))
+                print("your opponent won the round!")
         if len(p_deck) == 0:
-            end_message = "you lose :("
+            end_message = "you lost the game :("
             win_state = True
         if len(o_deck) == 0:
-            end_message = "you win :)"
+            end_message = "you win the game :)"
             win_state = True
         this_rounds_cards = []
         for x in cards_in_play:
@@ -67,7 +70,7 @@ def play_war():
         p_deck = deal_cards.deal_cards(1, len(p_deck), p_deck)[0]["player0"]
         o_deck = deal_cards.deal_cards(1, len(o_deck), o_deck)[0]["player0"]
 
-    return (end_message + " at round number " + str(round_number))
+    return (end_message)
 
 
 print(play_war())
