@@ -27,7 +27,6 @@ War setup:
         
 
 ## Available Scripts--BACK END
-In the backend-war directory, you can find the following files:
 
 ### 'python play_war.py'
 This file includes a function, play_war(), that takes no parameters. It iterates a 52 standard card deck through a game of War (rules above). Each round, the cards played are printed and the winner of the round is printed. The program ends when a player wins the game or when the number of rounds played reaches 10,000 as the game could conceivably be infinite. 
