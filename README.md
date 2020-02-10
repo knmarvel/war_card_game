@@ -1,4 +1,4 @@
-![Kano's logo](//imgur.com/a/cYFJ9rX)
+![Kano's logo](https://imgur.com/a/cYFJ9rX)
 
 # War! The Classic Card Game
 War setup:
