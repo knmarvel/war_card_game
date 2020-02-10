@@ -1,18 +1,16 @@
 import random
-import json
+import carddeck
 
 
-with open("carddeck.json") as carddeckjson:
-    carddeck = json.load(carddeckjson)
-
-
-def shuffle():
+def shuffle(cards):
     shuffled_cards = []
     used_ids = []
-    while len(shuffled_cards) < 52:
-        card_id = random.randint(0, 51)
+    while len(shuffled_cards) < len(cards):
+        card_id = random.randint(0, len(cards)-1)
         if card_id not in used_ids:
             used_ids.append(card_id)
-            card = "card" + str(card_id)
-            shuffled_cards.append([carddeck[card]])
+            shuffled_cards.append([cards[card_id]])
     return shuffled_cards
+
+
+# print(shuffle(carddeck.standard_card_deck))
