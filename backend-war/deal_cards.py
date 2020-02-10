@@ -5,6 +5,7 @@ def deal_cards(player_count, cards_in_hand):
     if player_count * cards_in_hand > 52:
         return "error--number of cards requested is too high"
     else:
+        list_of_ids = []
         shuffled_cards = shuffle.shuffle()
         player_hands = {}
         top_of_deck = 0
@@ -13,5 +14,7 @@ def deal_cards(player_count, cards_in_hand):
         for card in list(range(cards_in_hand)):
             for x in player_hands:
                 player_hands[x] = player_hands[x] + shuffled_cards[top_of_deck]
+                list_of_ids.append(shuffled_cards[top_of_deck][0]["id"])
                 top_of_deck += 1
         return player_hands
+
