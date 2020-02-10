@@ -1,5 +1,4 @@
-![Kano's logo](https://knmarvel.github.io/kanoaslogo.png)
-
+![Kano's logo](//imgur.com/a/cYFJ9rX)
 
 # War! The Classic Card Game
 War setup:
